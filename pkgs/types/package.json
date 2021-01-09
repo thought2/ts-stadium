@@ -1,0 +1,10 @@
+{
+  "name": "types",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "conditional-type-checks": "^1.0.5"
+  }
+}
