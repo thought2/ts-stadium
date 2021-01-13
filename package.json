@@ -1,3 +1,9 @@
 {
-  "dependencies": {}
+  "name": "ts-stadium",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "pkgs/**/*",
+    "samples/**/*"
+  ]
 }
