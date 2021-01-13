@@ -2,8 +2,6 @@
  * @since 1.0.0
  */
 
-import { ctor, GetData, TagData } from "./util";
-
 // -------------------------------------------------------------------------------------
 // model
 // -------------------------------------------------------------------------------------
@@ -25,17 +23,25 @@ export type WithType<A> = { type: A };
 export type GetType<A extends WithType<any>> = A["type"];
 
 // -------------------------------------------------------------------------------------
-// primitives
+// constructors
 // -------------------------------------------------------------------------------------
 
 /**
- * @category primitives
+ * @category constructors
  * @since 1.0.0
  */
 export const string = {} as WithType<string>;
 
+/**
+ * @category constructors
+ * @since 1.0.0
+ */
 export const number = (opts: {}): WithType<number> => ({ type: {} as number });
 
+/**
+ * @category constructors
+ * @since 1.0.0
+ */
 export const array = <T>(opts: {}, of: WithType<T>): WithType<Array<T>> => ({
   type: {} as Array<T>,
 });
@@ -65,4 +71,9 @@ export const array = <T>(opts: {}, of: WithType<T>): WithType<Array<T>> => ({
 //     { [key in keyof R]: R[key] extends RunType<infer a> ? a : never }
 //   >);
 
-export { WithType as default };
+export {
+  /**
+   * @since 1.0.0
+   */
+  WithType as default,
+};

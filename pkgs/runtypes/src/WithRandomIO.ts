@@ -1,7 +1,6 @@
 /**
  * @since 1.0.0
  */
-
 import { WithName } from "WithName";
 import { MkUnion, MkTagged, ctor, getData, GetData } from "./util";
 import { IO, io } from "fp-ts/IO";
@@ -13,6 +12,10 @@ import { array as A, io as I } from "fp-ts";
 // model
 // -------------------------------------------------------------------------------------
 
+/**
+ * @category model
+ * @since 1.0.0
+ */
 export type Json = number | Array<Json>;
 
 /**
@@ -49,4 +52,9 @@ export const array = <T>(
     ),
 });
 
-export { WithRandomIO as default };
+export {
+  /**
+   * @since 1.0.0
+   */
+  WithRandomIO as default,
+};

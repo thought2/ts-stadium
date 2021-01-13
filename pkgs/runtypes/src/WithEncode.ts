@@ -1,7 +1,6 @@
 /**
  * @since 1.0.0
  */
-
 import { WithName } from "WithName";
 import { MkUnion, MkTagged, ctor, getData, GetData } from "./util";
 
@@ -9,6 +8,10 @@ import { MkUnion, MkTagged, ctor, getData, GetData } from "./util";
 // model
 // -------------------------------------------------------------------------------------
 
+/**
+ * @category model
+ * @since 1.0.0
+ */
 export type Json = number | Array<Json>;
 
 /**
@@ -42,4 +45,9 @@ export const array = <T>(
   of: WithEncode<T>
 ): WithEncode<Array<T>> => ({ encode: (xs) => xs.map((x) => of.encode(x)) });
 
-export { WithEncode as default };
+export {
+  /**
+   * @since 1.0.0
+   */
+  WithEncode as default,
+};
